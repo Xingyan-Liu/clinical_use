@@ -1,6 +1,6 @@
 # Mortality Prediction with Final Random Forest Models
 
-This repository provides pre-trained Random Forest models for predicting:
+This repository provides final Random Forest models for predicting:
 - **In-hospital mortality** (`indeath`)
 - **Six-month mortality** (`sixdeath`)
 
