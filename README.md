@@ -1,4 +1,4 @@
-# Mortality Prediction with Random Forest Models
+# Mortality Prediction with Final Random Forest Models
 
 This repository provides pre-trained Random Forest models for predicting:
 - **In-hospital mortality** (`indeath`)
