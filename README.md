@@ -27,19 +27,23 @@ load("newdat.eg.RData")          # Your new dataset; should be a data.frame
 ```
 
 ### 3. Predict Mortality Probabilities
-
 ```r
-library(randomForestSRC)
+rlibrary(randomForestSRC)
 
-# Predict in-hospital mortality
-inprob <- sapply(indeath_rf_models, function(m) predict(m, newdat.eg)$predicted)
+# Example code to predict in-hospital mortality
+inprob = numeric(5)
+for (i in 1:5){
+  inprob[i] = predict(indeath_rf_models[[i]], newdat.eg)$predicted
+}
 mean(inprob)
 
-# Predict six-month mortality
-sixprob <- sapply(sixdeath_rf_models, function(m) predict(m, newdat.eg)$predicted)
+# Example code to predict six-month mortality
+sixprob = numeric(5)
+for (i in 1:5){
+  sixprob[i] = predict(sixdeath_rf_models[[i]], newdat.eg)$predicted
+}
 mean(sixprob)
 ```
-
 `mean(inprob)` and `mean(sixprob)` give you the average predicted probability across 5 models.
 
 ---
